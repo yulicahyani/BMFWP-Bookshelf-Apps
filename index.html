@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="headbar">
+        <div class="container">
+            <h1 class="headbar-title">Bookshelf Apps</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="toolbar container">
+            <button class="button button-primary" id="tambahBuku" type="button">Tambah Buku</button>
+            <button class="button button-primary" id="cariBuku" type="button">Cari Buku</button>
+        </div>
+
+        <section class="input-section">
+            <div class="input-buku container">
+                <h3>Tambahkan Data Buku</h3>
+                <form>
+                    <label for="bookTitle">Judul</label>
+                    <input class="form-input" type="text" id="title" required/>
+                    <label for="bookAuthor">Penulis</label>
+                    <input class="form-input" type="text" id="author" required/>
+                    <label for="bookYear">Tahun</label>
+                    <input class="form-input" type="number" id="year" required/>
+                    <div class="checkbox">
+                        <input type="checkbox" id="isCompleteRead" />
+                        <label for="isCompleteRead">&nbsp;&nbsp;Selesai dibaca</label>
+                    </div>
+                    <button class="button button-primary" type="submit">Tambahkan dalam rak belum selesai dibaca</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="searchbar container hide">
+                <h3>Cari Data Buku</h3>
+                <form>
+                    <input id="searchTitle" class="form-input" type="text" placeholder="Masukkan judul buku" />
+                    <button class="button button-primary" id="searchSubmit" type="submit">Cari</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="book_shelf">
+            <div class="container">
+                <h3>Belum Selesai Dibaca</h3>
+                <div class="book-list belum-selesai-baca"></div>
+              
+                <h3>Selesai Dibaca</h3>
+                <div class="book-list sudah-selesai-baca"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h3 class="footer-title">2021 - Ni Made Yuli Cahyani</h1>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
